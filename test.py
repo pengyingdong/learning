@@ -178,4 +178,4 @@ login()
 # print(a)
 def f(a=0,b=0,c=0):
     print(a,b,c)
-f(b=8)
+f(b=10)
