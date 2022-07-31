@@ -130,9 +130,22 @@ else:
 # b = a["小王"]
 # print(b)
 
+# def get_week_with_date(y, m, d):
+#     y = y - 1 if m == 1 or m == 2 else y
+#     m = 13 if m == 1 else (14 if m == 2 else m)
+#     w = (d + 2 * m + 3 * (m + 1) // 5 + y + y // 4 - y // 100 + y // 400) % 7 + 1
+#     return w
+# a = get_week_with_date(2022,7,29)
+# print(a)
+# def f(*args,c,d):
+#     print(args)
+#     print(c)
+#     print(d)
+# f("a","m",c="b",d="1")
 
-
-from tkinter import W
+# def f(*args):
+#     print(args)
+# f(1,"a",2,3)
 
 
 all_users = [{
@@ -148,7 +161,15 @@ all_users = [{
 }
 ]
 
-"""
+def register():
+    usr = input("请输入新用户名:")
+    pwd = input("请输入新密码:")
+    global all_users
+    b = {}
+    b.update({"username":usr,"password":pwd})
+    all_users.append(b)
+    print("注册成功!\n请登录!")
+
 def login():
     usr = input("请输入用户名:")
     pwd = input("请输入密码:")
@@ -166,22 +187,13 @@ def login():
     else:
         print("用户名不存在!")
 
-
-login()
-"""
-# def get_week_with_date(y, m, d):
-#     y = y - 1 if m == 1 or m == 2 else y
-#     m = 13 if m == 1 else (14 if m == 2 else m)
-#     w = (d + 2 * m + 3 * (m + 1) // 5 + y + y // 4 - y // 100 + y // 400) % 7 + 1
-#     return w
-# a = get_week_with_date(2022,7,29)
-# print(a)
-# def f(*args,c,d):
-#     print(args)
-#     print(c)
-#     print(d)
-# f("a","m",c="b",d="1")
-
-def f(*args):
-    print(args)
-f(1,"a",2,3)
+command = (input("1.注册账号\n2.登陆账号\n3.退出\n请输入命令"))
+if command == "1":
+    register()
+    login()
+elif command == "2":
+    login()
+elif command =="3":
+    exit()
+else:
+    print("输入错误")
