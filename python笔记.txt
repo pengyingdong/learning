@@ -363,3 +363,16 @@ def f(a=0,b=0,c=0):
 f(b=8)
 a和c打印出默认值，给b赋值8
 定义函数内的参数是形式参数，赋值参数是实际参数
+
+可变参数
+def f(*args):                           def f(*args，a):
+    print(args)                             print(args)
+f(1,"a",2,3)                            f(1,"a",2,a = 3)
+在定义函数内的参数填写*args表示在调用时可以传任意个数的参数，args后的参数传值需要用关键词比如 a = 3 打印出的args是个元组
+
+可变关键词参数
+def f(*args，**kwargs):
+    print(args)
+    print(kwargs)
+f(1,"a",2,a = 3，b = 5)
+表示也是可以传任意个数的参数必须放在最后一位，要用键值对的方式传参

@@ -176,6 +176,12 @@ login()
 #     return w
 # a = get_week_with_date(2022,7,29)
 # print(a)
-def f(a=0,b=0,c=0):
-    print(a,b,c)
-f(b=10)
+# def f(*args,c,d):
+#     print(args)
+#     print(c)
+#     print(d)
+# f("a","m",c="b",d="1")
+
+def f(*args):
+    print(args)
+f(1,"a",2,3)
