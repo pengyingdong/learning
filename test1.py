@@ -9,5 +9,5 @@ class Student:
         print(f"{self.name}的分数是：{self.score}分")
 
 
-a = Student("涛GG", 66)
-a.say_score()
+b = Student("涛GG", 66)
+b.say_score()
