@@ -1,7 +1,0 @@
-git add --all  添加到待提交  --all是将所有修改的文件添加到待提交 如果只添加某个文件 git add 文件路径
-
-git status 查看文件状态是待添加，或者待提交
-
-git commit -m ""   将所有待提交的文件提交到待发布""引号内填写提交的原因或备注
-
-git push origin master 将待发布的文件推送到远程的代码库 master分支内 ，妙啊
